@@ -14,10 +14,11 @@ RUN npm install
 COPY . .
 
 # Build the project and output to the ./dist directory
-RUN npm run build
+RUN npm run build --force
 
 # Expose the port the app runs on (adjust if necessary)
 EXPOSE 3000
 
 # Run the application
 CMD ["npm", "run", "start"]
+
